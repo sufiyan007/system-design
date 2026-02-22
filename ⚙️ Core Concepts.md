@@ -116,3 +116,47 @@ disruption, making the system unreliable for real-world usage.
 
 ---
 
+## 3️⃣ Reliability
+
+Reliability means the system always works correctly and does not lose or
+corrupt data, even if failures happen. When a user performs an action,
+the system must complete it properly and safely. Failures like server
+crash, database crash, or network issue can happen anytime, but a
+reliable system protects the data and completes the operation correctly.
+For example, when you send a WhatsApp message, reliability ensures the
+message is not lost, even if a server crashes. WhatsApp stores the
+message safely in its database before confirming success, so the message
+can still be delivered even if one server fails.
+
+The main purpose of reliability is to protect data and ensure correct
+system behavior because data is the most critical asset in any system.
+For example, when you transfer money using Google Pay, reliability
+ensures the money is deducted from your account and credited to the
+receiver correctly. The system stores the transaction in the database
+and also keeps backup copies. If one database fails, another backup
+database still has the correct data, so no money is lost. Without
+reliability, systems may lose messages, lose payments, or show incorrect
+data, which makes them unsafe.
+
+Example request flow showing reliability:
+
+User sends message on WhatsApp\
+→ Request goes to Server\
+→ Server saves message in Database\
+→ Database also stores backup copy\
+→ Server confirms success\
+→ Even if one server crashes, message is safe\
+→ Message is delivered successfully
+
+Reliability is used in systems where data must never be lost, such as:
+
+-   WhatsApp → messages must not be lost
+-   Banking systems → money must be safe
+-   Trading apps → orders must be correct
+-   Amazon → order details must be correct
+-   Uber → ride and payment data must be correct
+
+If reliability is not implemented, data can be lost during failures,
+causing serious problems for users and companies.
+
+---
