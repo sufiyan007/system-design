@@ -53,3 +53,70 @@ especially:
 -   Trading systems → order execution
 
 ---
+
+## 2️⃣ Availability
+
+Explanation
+
+Availability means the system is always up, running, and accessible
+whenever users try to use it. When a user opens an application and it
+responds successfully without errors or delay, the system is considered
+available. If the user opens the application and it shows errors, does
+not load, or cannot connect to the server, the system is unavailable. In
+real production environments, servers, databases, or network components
+can fail anytime due to hardware crash, software bugs, memory overflow,
+disk failure, power outage, or network disruption. Availability ensures
+that even if one or more components fail, the system continues serving
+users without interruption. For example, when you send a message on
+WhatsApp, your request goes through load balancers to one of many
+servers. If one server crashes, another healthy server immediately
+handles the request, and the message is delivered without you noticing
+any failure. This is achieved by running multiple servers instead of
+relying on a single server, ensuring continuous service.
+
+Example request flow showing availability in action:
+
+User opens WhatsApp\
+→ Request goes to Load Balancer\
+→ Load Balancer selects Server-1\
+→ Server-1 is down due to failure\
+→ Load Balancer redirects request to Server-2\
+→ Server-2 processes request successfully\
+→ User receives response without downtime
+
+This ensures uninterrupted service experience.
+
+Causes / Purpose
+
+The main purpose of availability is to prevent downtime and ensure
+continuous business operations. Downtime means the system becomes
+unusable, which directly impacts revenue, customer trust, and business
+reputation. If systems are unavailable, users cannot perform critical
+operations such as payments, messaging, trading, or booking services.
+For example, if UPI platforms like PhonePe or Google Pay become
+unavailable even for a few minutes, millions of users cannot complete
+transactions, causing financial and operational disruption. Similarly,
+if trading platforms like Zerodha become unavailable during stock market
+hours, users cannot buy or sell stocks, resulting in financial loss and
+user dissatisfaction. Availability ensures that failures in individual
+components do not stop the entire system by using redundancy, failover
+mechanisms, and multiple servers. This guarantees that the system
+continues functioning even when failures occur.
+
+Availability is used in all critical production systems such as:
+
+Banking systems to ensure transactions work anytime
+
+WhatsApp to ensure messages are delivered without interruption
+
+Netflix to ensure videos are always accessible
+
+Uber to ensure ride booking works continuously
+
+Trading platforms to ensure uninterrupted order execution
+
+Without availability, users experience downtime, failures, and service
+disruption, making the system unreliable for real-world usage.
+
+---
+
