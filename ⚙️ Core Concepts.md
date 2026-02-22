@@ -34,11 +34,11 @@ practical limit and supports millions or billions of users.
 
 Example request flow in scalable system:
 
-User opens WhatsApp\
-→ Request goes to Load Balancer\
-→ Load Balancer selects one server from 100 servers\
-→ Server processes request\
-→ Response sent back to user
+-   User opens WhatsApp\
+-   → Request goes to Load Balancer\
+-   → Load Balancer selects one server from 100 servers\
+-   → Server processes request\
+-   → Response sent back to user
 
 If traffic increases, WhatsApp adds more servers. Load balancer
 automatically distributes traffic. This ensures system remains fast.
@@ -46,14 +46,10 @@ automatically distributes traffic. This ensures system remains fast.
 Scalability is used in almost every modern production system,
 especially:
 
-Instagram → millions of feed requests per second
-
-YouTube → millions of video streaming requests
-
-Uber → real-time ride requests and driver tracking
-
-Banking systems → transaction processing
-
-Trading systems → order execution
+-   Instagram → millions of feed requests per second\
+-   YouTube → millions of video streaming requests\
+-   Uber → real-time ride requests and driver tracking\
+-   Banking systems → transaction processing\
+-   Trading systems → order execution
 
 ---
