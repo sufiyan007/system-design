@@ -223,3 +223,72 @@ to eliminate SPOF by using multiple servers, database replicas, backup
 systems, and failover mechanisms.
 
 ---
+
+## 5️⃣ Latency
+
+Latency is the time taken for one request to travel from user to server
+and back with a response. It is measured in milliseconds (ms). Lower
+latency means faster response, higher latency means slower response. For
+example, when you open Instagram and click refresh, the time between
+clicking refresh and seeing new posts is latency. If it takes 50 ms, the
+system feels fast. If it takes 3 seconds, the system feels slow. Latency
+is critical in real-time systems like trading apps, WhatsApp messaging,
+and Uber ride requests because users expect instant response.
+
+Example request flow showing latency:
+
+User opens WhatsApp\
+→ Request goes to Server\
+→ Server processes request\
+→ Server sends response\
+→ Total time taken = Latency
+
+Purpose is to make system respond faster so user experience is smooth.
+Companies reduce latency using cache, CDN, and servers closer to users.
+
+------------------------------------------------------------------------
+
+## 6️⃣ Throughput
+
+Throughput is the number of requests the system can handle per second.
+It measures system capacity. Higher throughput means system can handle
+more users at the same time. For example, if a server handles 1,000
+requests per second, its throughput is 1,000 requests/sec. Instagram
+handles millions of requests per second because millions of users scroll
+feeds at the same time. To increase throughput, companies add more
+servers (horizontal scaling) and use load balancers to distribute
+traffic.
+
+Example:
+
+Server handles\
+User 1 request\
+User 2 request\
+User 3 request\
+User 4 request
+
+Number of requests handled per second = Throughput
+
+Purpose is to support large number of users without system crash.
+
+------------------------------------------------------------------------
+
+## 7️⃣ Bandwidth
+
+Bandwidth is the maximum amount of data that can be transferred per
+second over network. It is measured in Mbps or Gbps. Higher bandwidth
+means more data can travel at once. For example, when you watch YouTube
+videos in 4K, large amount of video data must transfer from server to
+your phone. This requires high bandwidth. Netflix and YouTube use high
+bandwidth networks and CDNs to deliver video smoothly.
+
+Example:
+
+Watching YouTube video\
+→ Video data transfers from server to phone\
+→ Amount of data transferred per second = Bandwidth
+
+Purpose is to support large data transfer like videos, images, and
+files.
+
+---
