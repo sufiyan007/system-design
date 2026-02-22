@@ -15,14 +15,16 @@ timeout, or completely fail when traffic increases.
 
 There are two main ways systems scale in real production environments.
 
-Vertical Scaling (Scaling Up) means increasing power of the same server
+# Vertical Scaling (Scaling Up): 
+means increasing power of the same server
 by adding more RAM, CPU, or storage. For example, upgrading server from
 8GB RAM to 64GB RAM allows it to handle more users. This is simple but
 has a limit because a single machine cannot be upgraded infinitely. This
 approach is used in early-stage startups or small internal tools where
 traffic is moderate.
 
-Horizontal Scaling (Scaling Out) means adding more servers instead of
+# Horizontal Scaling (Scaling Out):
+means adding more servers instead of
 upgrading one server. For example, instead of 1 server handling 10,000
 users, you use 10 servers handling 1,000 users each. This is the most
 common approach in companies like Google, Uber, WhatsApp, and Amazon.
