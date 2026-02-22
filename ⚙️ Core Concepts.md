@@ -105,15 +105,11 @@ continues functioning even when failures occur.
 
 Availability is used in all critical production systems such as:
 
-Banking systems to ensure transactions work anytime
-
-WhatsApp to ensure messages are delivered without interruption
-
-Netflix to ensure videos are always accessible
-
-Uber to ensure ride booking works continuously
-
-Trading platforms to ensure uninterrupted order execution
+-   Banking systems to ensure transactions work anytime
+-   WhatsApp to ensure messages are delivered without interruption
+-   Netflix to ensure videos are always accessible
+-   Uber to ensure ride booking works continuously
+-   Trading platforms to ensure uninterrupted order execution
 
 Without availability, users experience downtime, failures, and service
 disruption, making the system unreliable for real-world usage.
