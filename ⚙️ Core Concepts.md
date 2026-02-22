@@ -76,7 +76,7 @@ relying on a single server, ensuring continuous service.
 
 Example request flow showing availability in action:
 
-User opens WhatsApp\
+→ User opens WhatsApp\
 → Request goes to Load Balancer\
 → Load Balancer selects Server-1\
 → Server-1 is down due to failure\
@@ -86,7 +86,7 @@ User opens WhatsApp\
 
 This ensures uninterrupted service experience.
 
-Causes / Purpose
+# Causes / Purpose
 
 The main purpose of availability is to prevent downtime and ensure
 continuous business operations. Downtime means the system becomes
