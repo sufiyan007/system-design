@@ -160,3 +160,66 @@ If reliability is not implemented, data can be lost during failures,
 causing serious problems for users and companies.
 
 ---
+
+## 4️⃣ SPOF (Single Point of Failure)
+
+SPOF means a single component in the system which, if it fails, will
+cause the entire system to stop working. This happens when the system
+depends on only one server, one database, or one load balancer without
+any backup. If that single component crashes, users cannot access the
+system anymore. For example, imagine a system with only one server
+handling all requests. If that server crashes due to hardware failure or
+overload, the entire application becomes unavailable because there is no
+backup server to take over. This makes the system unreliable and
+unavailable.
+
+The main purpose of identifying and removing SPOF is to ensure the
+system continues working even when failures happen. Companies solve this
+by adding redundancy, which means having multiple servers, multiple
+databases, and backup components. For example, WhatsApp does not use
+only one server. It uses thousands of servers. When you send a message,
+the load balancer selects one available server. If one server crashes,
+another server immediately handles the request. This ensures the system
+continues working without interruption and users do not notice any
+failure.
+
+Example showing SPOF problem:
+
+User opens application\
+→ Request goes to only one Server\
+→ Server crashes\
+→ No backup server available\
+→ Application becomes unavailable
+
+This server was SPOF because its failure stopped the entire system.
+
+Example showing SPOF solution:
+
+User opens application\
+→ Request goes to Load Balancer\
+→ Load Balancer selects Server-1\
+→ Server-1 crashes\
+→ Load Balancer redirects to Server-2\
+→ Application continues working
+
+Now there is no SPOF because backup servers exist.
+
+SPOF can exist in different parts of system such as:
+
+-   Single server → if it crashes, system stops
+-   Single database → if it fails, data cannot be accessed
+-   Single load balancer → if it fails, requests cannot be routed
+-   Single data center → if power/network fails, system goes down
+
+Real-world example: If Instagram had only one database server and it
+crashed, users would not be able to see posts, login, or refresh feeds.
+To prevent this, Instagram uses database replication, where multiple
+database copies exist. If one fails, another takes over.
+
+Removing SPOF is critical for high availability and reliability because
+production systems must handle failures without downtime. All large
+systems like WhatsApp, Netflix, Uber, and banking systems are designed
+to eliminate SPOF by using multiple servers, database replicas, backup
+systems, and failover mechanisms.
+
+---
