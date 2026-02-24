@@ -292,3 +292,47 @@ Purpose is to support large data transfer like videos, images, and
 files.
 
 ---
+
+## 8️⃣ Consistent Hashing
+
+Consistent Hashing is a strategy that distributes data across multiple
+servers using a hash value, so each data item is stored on one specific
+server (primary), and replicas are stored on other servers for
+reliability, ensuring balanced load and minimal data movement when
+servers are added or removed.
+
+Example:
+
+Servers:
+
+Server A\
+Server B\
+Server C\
+Server D
+
+User uploads:
+
+vacation.jpg
+
+System calculates hash:
+
+hash("vacation.jpg") → maps to Server C
+
+Primary storage:
+
+Server A → ---\
+Server B → ---\
+Server C → vacation.jpg (Primary)\
+Server D → ---
+
+Replication happens automatically (Replication Factor = 2):
+
+Server A → ---\
+Server B → ---\
+Server C → vacation.jpg (Primary)\
+Server D → vacation.jpg (Replica)
+
+Now if Server C fails, Server D still has vacation.jpg, so the system
+remains reliable and available.
+
+---
